@@ -35,16 +35,17 @@ export default function Home() {
       {/* Game Modes */}
       <div className="mb-10 grid w-full max-w-2xl gap-4 sm:grid-cols-3">
         {gamemodes.map((mode) => (
-          <div
+          <Link
             key={mode.title}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 text-center"
+            href="/play"
+            className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5 text-center transition-all hover:scale-105 hover:border-green-500/50 hover:bg-zinc-800/80 hover:shadow-lg hover:shadow-green-500/10"
           >
             <div className="mb-2 text-3xl">{mode.emoji}</div>
             <h3 className="mb-1 text-sm font-semibold text-white">
               {mode.title}
             </h3>
             <p className="text-xs text-zinc-500">{mode.desc}</p>
-          </div>
+          </Link>
         ))}
       </div>
 
